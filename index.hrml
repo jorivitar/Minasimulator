@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Título de la página</title>
+</head>
+<body>
+  <div id="tarjetas"></div>
+  <div id="abc"></div>
+  <img src="https://www.cryptopolitan.com/wp-content/uploads/2024/09/Is-Bitcoin-mining-still-a-viable-investment-opportunities-and-limitations-for-new-miners-768x465.webp" 
+  style="height: auto; width: 100px;"
+  id="pico"
+  />
+  
+  <button id="mineros">conprar mineros</button>
+  
+  <button id="def">tienda💎</button>
+  
+  
+  <div id="articulo"></div>
+  
+</body>
+</html>
+<script>
+  
+  
+  const mineria = document.getElementById('pico');
+  
+  
+  const mineros = document.getElementById('mineros');
+  
+  const tienda = document.getElementById('def');
+  
+  
+  let totaldiv = document.getElementById("abc");
+  
+  let producto = document.getElementById("articulo");
+  
+  
+  let tarjetas = document.getElementById("tarjetas");
+//..........variables.........
+  let monedas=0
+  let generador=1
+  let cobrar=5
+  let aaa=20
+  let zcs=""
+  let tarje=0
+  mineria.addEventListener('click', function() {
+  monedas=monedas+generador
+  z()
+ }); 
+  mineros.addEventListener('click', function() {
+  
+    if (monedas >= 5){
+  monedas=monedas-cobrar
+  generador=generador+2
+  }
+  
+  monedas=monedas-cobrar
+  generador=generador+2
+  if (monedas < 5){
+    monedas=monedas+cobrar
+    generador=generador-2
+    alert("no tienes suficientes 🐢$")
+    
+  }
+z()
+    
+  
+
+   
+});
+producto.addEventListener('click', function() {
+c =confirm("quieres conprar 🎁cofre por 20$🐢")
+
+    if (monedas >= aaa){
+    if (c == true){
+    
+  monedas=monedas-aaa
+  alert("as ganado 10💳")
+  tarje=tarje+10
+  xd()
+  }
+  }
+  
+  
+  
+  if (monedas < aaa){
+  if (c == true){
+  
+    monedas=monedas+aaa
+    alert("no tienes suficientes🐢$")
+    }
+  }
+
+
+if (c == true){
+  monedas = monedas-aaa
+  
+  z()
+  
+
+}
+ 
+   
+  
+
+    });
+    
+
+tienda.addEventListener('click', function() {
+vvv()
+});
+    
+  
+  function z(){
+  totaldiv.innerHTML="🐢$" + monedas;
+  
+}
+  function vvv(){
+  producto.innerHTML="🎁cofre: 20$🐢";
+  
+}
+  
+  function xd(){
+  tarjetas.innerHTML=tarje+"💳";
+  
+}
+</script>
